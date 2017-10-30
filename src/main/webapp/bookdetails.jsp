@@ -8,7 +8,7 @@
 
 <%
     String bookId = request.getParameter("bookId");
-    if(bookId=null) bookId = "201";
+    if(bookId==null) bookId = "201";
     BookDetails book = bookDB.getBookDetails(bookId);
 %>
 
@@ -16,7 +16,7 @@
     if(book == null)
     {
 %>
-    <p>书号"<%=bookId>"在数据库中不存在<p>
+    <p>书号<%=bookId %>在数据库中不存在<p>
     <strong><a href="<%=request.getContextPath()%>/catalog.jsp">继续购物</a></strong>
 <%
     return;

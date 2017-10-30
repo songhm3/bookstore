@@ -18,7 +18,7 @@
 <td><input type="text" name="cardname" value="guest" size="19"></td>
 </tr>
 <td><strong>信用卡账号</strong></td>
-<td>input type="text" name="cardnum" value="xxxx xxxx xxxx xxxx" size="19" ></td>
+<td><input type="text" name="cardnum" value="xxxx xxxx xxxx xxxx" size="19" ></td>
 </tr>
 <tr>
 <td></td>

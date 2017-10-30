@@ -1,4 +1,4 @@
-<%@ page contentType="text/html; charset=GB2312" %>
+<%@ page contentType="text/html; charset=UTF-8" %>
 
 <%@ include file="common.jsp" %>
 <%@ page import="java.util.*" %>
