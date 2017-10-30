@@ -6,16 +6,21 @@ import java.util.*;
 
 public class BookDB {
     private ArrayList books;
-    private String dbUrl = "jdbc:mysql://localhost:3306/bookstore";
-    private String dbUser = "root";
-    private String dbPwd = "";
+//    private String dbUrl = "jdbc:mysql://localhost:3306/bookstore";
+//    private String dbUser = "root";
+//    private String dbPwd = "";
+    private DataSource ds = null;
 
     public BookDB() throws Exception{
-        Class.forName("com.mysql.jdbc.Driver");
+        //Class.forName("com.mysql.jdbc.Driver");
+        Context ctx = new InitialContext();
+        if(ctx == null) throw new Exception("No Context");
+        ds = (DataSource) ctx.lookup("java:comp/env/jdbc/bookstore");
     }
 
     public Connection getConnection() throws Exception {
-        return java.sql.DriverManager.getConnection(dbUrl,dbUser,dbPwd);
+        //return java.sql.DriverManager.getConnection(dbUrl,dbUser,dbPwd);
+        return ds.getConnection();
     }
 
     public void closeConnection(Connection con) {

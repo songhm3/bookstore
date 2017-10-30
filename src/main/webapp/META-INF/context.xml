@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Context crossContext="true" reloadable="true">
+    <Resource name="jdbc/bookstore" auth="Container" type="javax.sql.DataSource"
+              username="root" password="" driverClassName="com.mysql.jdbc.Driver"
+              url="jdbc:mysql://localhost:3306/bookstore" maxActive="15" maxIdle="3" />
+    <ResourceLink name="jdbc/bookstore" global="jdbc/bookstore"
+
+                  type="javax.sql.DataSource" />
+
+</Context>
